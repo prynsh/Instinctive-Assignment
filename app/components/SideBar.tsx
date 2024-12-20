@@ -7,6 +7,8 @@ import { RiBookMarkedLine, RiDashboard3Line, RiBookReadFill } from "react-icons/
 import { VscPieChart } from "react-icons/vsc";
 import { IconType } from 'react-icons';
 import Link from "next/link";
+
+
 const menuItems = [
   { icon: RiDashboard3Line, label: 'Dashboard', active: false },
   { icon: RiBookReadFill, label: 'Students', active: true },
@@ -18,8 +20,6 @@ const menuItems = [
 
 interface NavItem{
   icon: IconType;
-  label: string;
-  active: boolean;
 }
 
 export function Sidebar() {
