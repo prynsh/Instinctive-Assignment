@@ -7,6 +7,7 @@ import { TbSettings2 } from "react-icons/tb";
 import { RiBookMarkedLine, RiDashboard3Line, RiBookReadFill } from "react-icons/ri";
 import { VscPieChart } from "react-icons/vsc";
 import { IconType } from 'react-icons';
+import Link from "next/link";
 const menuItems = [
   { icon: RiDashboard3Line, label: 'Dashboard', active: false },
   { icon: RiBookReadFill, label: 'Students', active: true },
@@ -23,7 +24,9 @@ interface NavItem{
 export function Sidebar() {
   return (
     <div className="w-64 bg-gray-50 h-screen p-4">
+      <Link href={"/"} >
       <Logo className="mb-8" />
+      </Link>
       <nav>
         {menuItems.map((item, index) => (
           <NavItem 
@@ -31,7 +34,6 @@ export function Sidebar() {
             icon={item.icon} 
             label={item.label} 
             active={item.active}
-            // onClick={() => console.log(`Clicked ${item.label}`)}
           />
         ))}
       </nav>
