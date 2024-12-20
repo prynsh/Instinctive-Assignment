@@ -1,5 +1,4 @@
 
-// import { HelpCircle } from 'lucide-react';
 import { IoIosHelpCircleOutline } from "react-icons/io"
 import { NavItem } from '../ui/NavItem';
 import { Logo } from '../ui/Logo';
@@ -19,6 +18,8 @@ const menuItems = [
 
 interface NavItem{
   icon: IconType;
+  label: string;
+  active: boolean;
 }
 
 export function Sidebar() {
